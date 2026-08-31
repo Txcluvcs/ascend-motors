@@ -24,7 +24,7 @@ const CARS = [
     model: "G 63 AMG",
     year: 2026,
     mileage: 20,
-    price: 30500000,
+    price: 30300000,
     trim: "Подвеска A22 / зимний пакет / внутренний карбон"
   },
   {
