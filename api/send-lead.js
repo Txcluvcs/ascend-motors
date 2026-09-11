@@ -12,10 +12,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: "Method not allowed" });
   }
 
-  const { name, phone, car, message } = req.body || {};
+  const { carQuery, budget, condition, important, contact } = req.body || {};
 
-  if (!name || !phone) {
-    return res.status(400).json({ ok: false, error: "Заполните имя и телефон" });
+  if (!contact) {
+    return res.status(400).json({ ok: false, error: "Укажите телефон или Telegram" });
   }
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -29,11 +29,12 @@ export default async function handler(req, res) {
   }
 
   const text =
-    `🚘 Новая заявка — Ascend Motors\n\n` +
-    `Имя: ${name}\n` +
-    `Телефон: ${phone}\n` +
-    (car ? `Интересует: ${car}\n` : "") +
-    (message ? `Комментарий: ${message}\n` : "");
+    `🚘 Новый запрос — Ascend Motors\n\n` +
+    (carQuery ? `Что ищет: ${carQuery}\n` : "") +
+    (budget ? `Бюджет: ${budget}\n` : "") +
+    (condition ? `Новый/с пробегом: ${condition}\n` : "") +
+    (important ? `Важно: ${important}\n` : "") +
+    `Контакт: ${contact}\n`;
 
   try {
     const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {

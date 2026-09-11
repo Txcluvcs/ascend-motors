@@ -24,7 +24,7 @@ const CARS = [
     model: "G 63 AMG",
     year: 2026,
     mileage: 20,
-    price: 30300000,
+    price: 30500000,
     trim: "Подвеска A22 / зимний пакет / внутренний карбон"
   },
   {
@@ -71,7 +71,7 @@ function renderCars() {
         ${car.trim ? `<div class="car-trim">${car.trim}</div>` : ""}
         <div class="car-meta">
           <span class="car-price">${formatPrice(car.price)}<span class="vat-note">без НДС</span></span>
-          <a href="#contact" class="car-link" onclick="prefillCar('${car.make} ${car.model}, ${car.year}')">Написать →</a>
+          <a href="#contact" class="car-link" onclick="prefillCar('${car.make} ${car.model}, ${car.year}')">Подробнее →</a>
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@ function renderCars() {
 }
 
 function prefillCar(label) {
-  const field = document.getElementById("lead-car");
+  const field = document.getElementById("lead-car-query");
   if (field) field.value = label;
 }
 

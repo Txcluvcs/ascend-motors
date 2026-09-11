@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ascend Motors — Консьерж-сервис по подбору премиальных автомобилей</title>
+<title>Ascend Motors — Премиальные автомобили в наличии и под заказ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -105,13 +105,6 @@
     align-items:center;
   }
   .hero .eyebrow{justify-content:center;}
-  .hero-service-tag{
-    margin-top:22px;
-    font-size:14px;
-    color:var(--text-1);
-    letter-spacing:.02em;
-  }
-  .hero-service-tag b{color:var(--text-0);font-weight:600;}
   .hero h1{
     font-size:clamp(32px,4.6vw,52px);
     line-height:1.16;
@@ -148,27 +141,13 @@
   }
   .btn-ghost:hover{border-color:var(--bronze-dim);}
 
-  .hero-facts{
-    display:flex;
-    gap:0;
-    margin-top:56px;
-    border-top:1px solid var(--line);
-    width:100%;
-    max-width:760px;
+  .hero-tagline{
+    margin-top:36px;
+    font-size:13.5px;
+    color:var(--text-2);
+    letter-spacing:.02em;
   }
-  .hero-fact{
-    flex:1;
-    padding:26px 20px;
-    text-align:center;
-    border-right:1px solid var(--line);
-  }
-  .hero-fact:last-child{border-right:none;}
-  .hero-fact .stat-num{
-    font-size:26px;color:var(--bronze-light);font-weight:700;
-  }
-  .hero-fact .stat-label{
-    color:var(--text-2);font-size:12.5px;margin-top:6px;
-  }
+  .hero-tagline b{color:var(--text-1);font-weight:600;}
 
   /* SECTION SHARED */
   section{padding:96px 24px;}
@@ -184,40 +163,56 @@
   }
   .section-head p{color:var(--text-1);margin-top:14px;font-size:15.5px;}
 
-  /* VALUE / WHAT YOU GET (merged) */
-  .value-section{
-    background:var(--bg-1);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-  .value-list{
-    list-style:none;
+  /* CONCIERGE (FIND FOR ME) */
+  .concierge{background:var(--bg-1);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .mini-steps{
     display:grid;
-    grid-template-columns:repeat(2, minmax(0,1fr));
+    grid-template-columns:repeat(4, minmax(0,1fr));
     gap:16px;
-    max-width:840px;
-    margin:0 auto;
+    max-width:920px;margin:0 auto;
   }
-  .value-list li{
-    display:flex;
-    align-items:flex-start;
-    gap:16px;
+  .mini-step{
     background:var(--bg-2);
     border:1px solid var(--line);
-    padding:22px 22px;
-    font-size:15px;
-    color:var(--text-0);
-    line-height:1.5;
+    padding:22px 18px;
+    text-align:center;
+    font-size:14px;
+    color:var(--text-1);
   }
-  .value-icon{
-    flex:none;
-    width:38px;height:38px;
-    border:1px solid var(--bronze-dim);
-    border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    color:var(--bronze-light);
+  .mini-step span{
+    display:block;
     font-family:'Unbounded',sans-serif;
-    font-size:15px;
+    color:var(--bronze-dim);
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+
+  /* WHY ASCEND */
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:20px;
+    max-width:900px;margin:0 auto;
+  }
+  .why-card{
+    background:var(--bg-1);
+    border:1px solid var(--line);
+    padding:28px 26px;
+  }
+  .why-card h3{font-size:17px;font-weight:600;margin-bottom:10px;}
+  .why-card p{color:var(--text-1);font-size:14.5px;}
+  .trust-chips{
+    display:flex;flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    max-width:900px;margin:36px auto 0;
+  }
+  .trust-chips span{
+    border:1px solid var(--line);
+    color:var(--text-1);
+    font-size:12.5px;
+    padding:8px 14px;
   }
 
   /* LISTINGS */
@@ -275,9 +270,15 @@
     margin-top:2px;
   }
   .car-link{font-size:13px;color:var(--text-1);}
-  .listings-note{
-    text-align:center;margin-top:40px;
-    color:var(--text-2);font-size:13.5px;
+  .listings-cta{
+    text-align:center;margin-top:48px;
+    padding-top:40px;
+    border-top:1px solid var(--line);
+  }
+  .listings-cta p{margin:0;font-size:18px;font-weight:600;color:var(--text-0);}
+  .listings-cta .listings-cta-sub{
+    font-size:14px;font-weight:400;color:var(--text-1);
+    margin-top:6px;margin-bottom:22px;
   }
 
   /* CONTACT FORM */
@@ -290,7 +291,7 @@
     font-size:12.5px;color:var(--text-2);
     text-transform:uppercase;letter-spacing:.06em;
   }
-  .form-row input,.form-row textarea{
+  .form-row input,.form-row textarea,.form-row select{
     background:var(--bg-1);
     border:1px solid var(--line);
     color:var(--text-0);
@@ -299,7 +300,8 @@
     font-size:15px;
     resize:vertical;
   }
-  .form-row input:focus,.form-row textarea:focus{
+  .form-row select{appearance:none;}
+  .form-row input:focus,.form-row textarea:focus,.form-row select:focus{
     outline:none;border-color:var(--bronze-dim);
   }
   .lead-form button{border:none;cursor:pointer;font-family:'Unbounded',sans-serif;}
@@ -327,6 +329,21 @@
   .process-item h3{font-size:19px;font-weight:600;margin-bottom:8px;}
   .process-item p{color:var(--text-1);font-size:15px;max-width:560px;}
 
+  /* BRANDS */
+  .brands{padding:56px 24px;background:var(--bg-1);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .brand-strip{
+    display:flex;flex-wrap:wrap;
+    justify-content:center;
+    gap:36px;
+    max-width:900px;margin:0 auto;
+  }
+  .brand-strip span{
+    font-family:'Unbounded',sans-serif;
+    font-size:15px;
+    color:var(--text-2);
+    letter-spacing:.02em;
+  }
+
   /* PRICE */
   .price-section{
     background:linear-gradient(180deg,var(--bg-1),var(--bg-0));
@@ -347,6 +364,14 @@
     margin:18px 0 8px;
   }
   .price-box .amount sup{font-size:22px;margin-left:6px;}
+  .price-heading{
+    font-family:'Unbounded',sans-serif;
+    font-size:clamp(22px,3vw,30px);
+    font-weight:600;
+    color:var(--text-0);
+    margin:16px 0 14px;
+  }
+  .price-heading span{color:var(--bronze-light);}
   .price-note{color:var(--text-1);font-size:14px;margin-bottom:32px;}
   .price-list{
     display:flex;flex-direction:column;gap:10px;
@@ -394,17 +419,12 @@
     .nav-cta{padding:9px 16px;font-size:12px;}
     .logo{font-size:15px;}
 
-    .hero-facts{flex-direction:column;margin-top:40px;}
-    .hero-fact{
-      flex:none;width:100%;
-      border-right:none;
-      border-bottom:1px solid var(--line);
-      padding:18px 8px;
-    }
-    .hero-fact:last-child{border-bottom:none;}
+    .hero-tagline{margin-top:32px;font-size:12.5px;}
 
     .value-list{grid-template-columns:1fr;}
     .value-list li{padding:18px;font-size:14px;}
+    .mini-steps{grid-template-columns:repeat(2, minmax(0,1fr));}
+    .why-grid{grid-template-columns:1fr;}
 
     .listing-grid{grid-template-columns:1fr;}
     .car-specs{gap:12px;font-size:12.5px;}
@@ -415,17 +435,18 @@
     .process-item p{font-size:14px;}
 
     .price-box{padding:40px 22px;}
-    .price-box .amount{font-size:44px;}
+    .price-heading{font-size:24px;}
 
     .footer-grid{flex-direction:column;gap:28px;}
   }
 
   @media(max-width:420px){
     .hero h1{font-size:28px;}
-    .hero-service-tag{font-size:13px;}
+    .hero-tagline{font-size:12px;}
     .hero p{font-size:15.5px;}
     .btn{padding:14px 22px;font-size:12.5px;}
     .price-box .amount{font-size:36px;}
+    .price-heading{font-size:21px;}
   }
 </style>
 </head>
@@ -435,75 +456,27 @@
   <div class="nav">
     <a href="#top" class="logo">ASCEND <span>MOTORS</span></a>
     <nav class="nav-links">
-      <a href="#listings">Лучшие предложения</a>
-      <a href="#process">Как мы работаем</a>
-      <a href="#price">Стоимость</a>
+      <a href="#listings">Автомобили</a>
+      <a href="#process">Как это работает</a>
+      <a href="#price">Условия</a>
     </nav>
-    <a href="#contact" class="nav-cta">Оставить заявку</a>
+    <a href="#contact" class="nav-cta">Обсудить автомобиль</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-grid">
-    <div class="eyebrow">Консьерж-сервис · Москва</div>
-    <div class="hero-service-tag">Мы <b>не автосалон</b> — мы подбираем автомобиль под вас из наличия проверенных партнёров</div>
-    <h1>Подберём премиальный автомобиль<br><em>и возьмём сделку на себя.</em></h1>
-    <p>Вы формулируете запрос — мы находим подходящий вариант, проверяем его и сопровождаем сделку от начала до постановки на учёт.</p>
+    <div class="eyebrow">Ascend Motors · Москва</div>
+    <h1>Премиальные автомобили<br><em>в наличии и под заказ.</em></h1>
+    <p>Автомобили из проверенной партнёрской сети. Подберём, проверим и проведём сделку под ключ.</p>
     <div class="hero-cta-row">
-      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
-      <a href="#listings" class="btn btn-ghost">Смотреть предложения</a>
+      <a href="#listings" class="btn btn-primary">Смотреть автомобили</a>
+      <a href="#request" class="btn btn-ghost">Подобрать автомобиль</a>
     </div>
-    <div class="hero-facts">
-      <div class="hero-fact">
-        <div class="stat-num">100+</div>
-        <div class="stat-label">авто в партнёрской сети</div>
-      </div>
-      <div class="hero-fact">
-        <div class="stat-num">15 000 ₽</div>
-        <div class="stat-label">фикс. стоимость услуги</div>
-      </div>
-      <div class="hero-fact">
-        <div class="stat-num">0 ₽</div>
-        <div class="stat-label">предоплата</div>
-      </div>
+    <div class="hero-tagline">
+      <b>100+</b> автомобилей в партнёрской сети · Проверка · Сопровождение сделки
     </div>
-  </div>
-</section>
-
-<!-- FOR THOSE WHO VALUE TIME -->
-<section class="value-section" id="value">
-  <div class="wrap">
-    <div class="section-head" style="margin:0 auto 48px;text-align:center;">
-      <div class="eyebrow" style="justify-content:center;">Для тех, кто ценит своё время</div>
-      <h2>Что вы получаете</h2>
-    </div>
-    <ul class="value-list">
-      <li>
-        <span class="value-icon">₽</span>
-        <span>Лучшие цены — напрямую от партнёров, без наценок</span>
-      </li>
-      <li>
-        <span class="value-icon">⟲</span>
-        <span>Сами перебираем варианты и подбираем под ваш запрос</span>
-      </li>
-      <li>
-        <span class="value-icon">✓</span>
-        <span>Осматриваем автомобиль лично и проверяем документы</span>
-      </li>
-      <li>
-        <span class="value-icon">⚙</span>
-        <span>Сопровождаем сделку под ключ — от заявки до учёта</span>
-      </li>
-      <li>
-        <span class="value-icon">★</span>
-        <span>Доступ к эксклюзивным предложениям вне открытого рынка</span>
-      </li>
-      <li>
-        <span class="value-icon">₽</span>
-        <span>Любой способ оплаты — наличные, безнал, лизинг</span>
-      </li>
-    </ul>
   </div>
 </section>
 
@@ -511,14 +484,75 @@
 <section class="listings" id="listings">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">В наличии сейчас</div>
-      <h2>Лучшие предложения</h2>
-      <p>Актуальные предложения, доступные к покупке прямо сейчас.</p>
+      <div class="eyebrow">Автомобили</div>
+      <h2>Автомобили</h2>
+      <p>Актуальные предложения из нашей партнёрской сети.</p>
     </div>
     <div class="listing-grid" id="listing-grid">
       <!-- Карточки машин рендерятся автоматически из файла cars.js -->
     </div>
-    <p class="listings-note">Это часть партнёрской сети — если не нашли подходящий вариант, напишите нам, и мы подберём его под ваш запрос.</p>
+    <div class="listings-cta">
+      <p>Не нашли нужный автомобиль?</p>
+      <p class="listings-cta-sub">Найдём его среди предложений наших партнёров.</p>
+      <a href="#request" class="btn btn-ghost">Оставить запрос</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONCIERGE / FIND FOR ME -->
+<section class="concierge" id="request">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 40px;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Не нашли подходящий вариант?</div>
+      <h2>Найдём автомобиль под ваши параметры</h2>
+      <p style="margin-left:auto;margin-right:auto;">Марка, модель, бюджет, цвет, комплектация, пробег — вы формулируете задачу, мы находим подходящие варианты среди проверенных партнёров.</p>
+    </div>
+    <div class="mini-steps">
+      <div class="mini-step"><span>01</span>Формируем требования</div>
+      <div class="mini-step"><span>02</span>Ищем варианты</div>
+      <div class="mini-step"><span>03</span>Проверяем автомобиль</div>
+      <div class="mini-step"><span>04</span>Сопровождаем сделку</div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="#contact" class="btn btn-primary">Оставить запрос</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ASCEND -->
+<section class="why-section" id="why">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 48px;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Почему Ascend</div>
+      <h2>Покупка премиального автомобиля должна быть удовольствием, а не испытанием</h2>
+      <p style="margin-left:auto;margin-right:auto;">Мы берём на себя поиск, проверку и организационные вопросы, чтобы вы могли сосредоточиться на выборе автомобиля.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Проверенные партнёры</h3>
+        <p>Работаем с поставщиками и площадками, с которыми сформирована собственная сеть контактов.</p>
+      </div>
+      <div class="why-card">
+        <h3>Премиальный сегмент</h3>
+        <p>Фокусируемся на автомобилях высокого ценового сегмента, где особенно важны состояние, история и комплектация.</p>
+      </div>
+      <div class="why-card">
+        <h3>Прозрачная сделка</h3>
+        <p>Проверяем историю автомобиля, документы и ключевые параметры перед покупкой.</p>
+      </div>
+      <div class="why-card">
+        <h3>Сопровождение под ключ</h3>
+        <p>От поиска автомобиля до передачи его владельцу.</p>
+      </div>
+    </div>
+    <div class="trust-chips">
+      <span>Проверка истории</span>
+      <span>Проверка документов</span>
+      <span>Проверка техсостояния</span>
+      <span>Юридическая чистота</span>
+      <span>Сопровождение сделки</span>
+      <span>Любой способ оплаты — наличные, безнал, лизинг</span>
+    </div>
   </div>
 </section>
 
@@ -526,29 +560,29 @@
 <section id="process">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Как мы работаем</div>
-      <h2>От запроса до постановки на учёт</h2>
+      <div class="eyebrow">Как это работает</div>
+      <h2>Покупка автомобиля без лишних сложностей</h2>
     </div>
     <div class="process-list">
       <div class="process-item">
         <div class="step-num">01</div>
         <div>
-          <h3>Заявка и бриф</h3>
-          <p>Обсуждаем требования: марка, бюджет, комплектация, сроки. Формируем точный запрос.</p>
+          <h3>Запрос</h3>
+          <p>Рассказываете, какой автомобиль хотите: марка, бюджет, комплектация, сроки.</p>
         </div>
       </div>
       <div class="process-item">
         <div class="step-num">02</div>
         <div>
-          <h3>Подбор из партнёрской сети</h3>
-          <p>Ищем подходящие варианты среди более 100 автомобилей у проверенных партнёров.</p>
+          <h3>Подбор</h3>
+          <p>Находим подходящие варианты среди более 100 автомобилей у проверенных партнёров.</p>
         </div>
       </div>
       <div class="process-item">
         <div class="step-num">03</div>
         <div>
-          <h3>Проверка и осмотр</h3>
-          <p>Проверяем историю, документы и техническое состояние. Согласовываем финальную цену.</p>
+          <h3>Проверка</h3>
+          <p>Изучаем историю, документы и техническое состояние автомобиля. Согласовываем цену.</p>
         </div>
       </div>
       <div class="process-item">
@@ -561,10 +595,25 @@
       <div class="process-item">
         <div class="step-num">05</div>
         <div>
-          <h3>Постановка на учёт</h3>
+          <h3>Передача</h3>
           <p>Оформляем автомобиль в ГИБДД — вы получаете готовый к эксплуатации автомобиль.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands" id="brands">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:28px;">Работали с автомобилями брендов</div>
+    <div class="brand-strip">
+      <span>Porsche</span>
+      <span>Mercedes-AMG</span>
+      <span>BMW</span>
+      <span>Range Rover</span>
+      <span>Bentley</span>
+      <span>Lamborghini</span>
     </div>
   </div>
 </section>
@@ -573,16 +622,15 @@
 <section class="price-section" id="price">
   <div class="wrap">
     <div class="price-box">
-      <div class="eyebrow" style="justify-content:center;">Стоимость услуги</div>
-      <div class="amount">15 000<sup>₽</sup></div>
-      <div class="price-note">Фиксированная стоимость. Без предоплаты — оплата по факту работы.</div>
+      <div class="eyebrow" style="justify-content:center;">Условия работы</div>
+      <div class="price-heading">Подбор автомобиля — <span>от 15 000 ₽</span></div>
+      <div class="price-note">Стоимость зависит от сложности запроса и объёма работы. Первичная консультация — бесплатно.</div>
       <ul class="price-list">
         <li>Подбор автомобиля из партнёрской сети</li>
         <li>Проверка истории и юридической чистоты</li>
         <li>Сопровождение сделки от начала до конца</li>
-        <li>Постановка автомобиля на учёт</li>
       </ul>
-      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+      <a href="#contact" class="btn btn-primary">Обсудить автомобиль</a>
     </div>
   </div>
 </section>
@@ -591,26 +639,37 @@
 <section id="contact">
   <div class="wrap">
     <div class="section-head" style="margin:0 auto 40px;text-align:center;max-width:520px;">
-      <div class="eyebrow" style="justify-content:center;">Оставить заявку</div>
-      <h2>Расскажите, что вы ищете</h2>
-      <p>Свяжемся с вами в ближайшее время и обсудим ваш запрос.</p>
+      <div class="eyebrow" style="justify-content:center;">Оставить запрос</div>
+      <h2>Не знаете, какой автомобиль выбрать?</h2>
+      <p>Расскажите, что вы ищете — мы предложим варианты.</p>
     </div>
 
     <form id="lead-form" class="lead-form">
-      <input type="hidden" id="lead-car" name="car" value="">
       <div class="form-row">
-        <label>Имя</label>
-        <input type="text" name="name" required placeholder="Как к вам обращаться">
+        <label>Что ищете?</label>
+        <input type="text" id="lead-car-query" name="carQuery" placeholder="BMW / Mercedes / Porsche / Range Rover / другое">
       </div>
       <div class="form-row">
-        <label>Телефон</label>
-        <input type="tel" name="phone" required placeholder="+7 ___ ___-__-__">
+        <label>Бюджет</label>
+        <input type="text" name="budget" placeholder="например, 15 000 000 ₽">
       </div>
       <div class="form-row">
-        <label>Комментарий</label>
-        <textarea name="message" rows="3" placeholder="Марка, бюджет, сроки — что угодно, необязательно"></textarea>
+        <label>Новый или с пробегом</label>
+        <select name="condition">
+          <option value="Не важно">Не важно</option>
+          <option value="Новый">Новый</option>
+          <option value="С пробегом">С пробегом</option>
+        </select>
       </div>
-      <button type="submit" class="btn btn-primary" id="lead-submit" style="width:100%;">Отправить заявку</button>
+      <div class="form-row">
+        <label>Что важно?</label>
+        <textarea name="important" rows="3" placeholder="Комплектация, цвет, сроки — что угодно"></textarea>
+      </div>
+      <div class="form-row">
+        <label>Ваш контакт</label>
+        <input type="text" name="contact" required placeholder="Телефон или Telegram">
+      </div>
+      <button type="submit" class="btn btn-primary" id="lead-submit" style="width:100%;">Получить варианты</button>
       <p id="lead-status" class="lead-status"></p>
     </form>
   </div>
@@ -622,17 +681,17 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">ASCEND <span>MOTORS</span></div>
-        <p>Консьерж-сервис по подбору премиальных автомобилей в Москве.</p>
+        <p>Премиальные автомобили в наличии и под заказ. Москва.</p>
       </div>
       <div class="footer-col">
         <h4>Навигация</h4>
-        <a href="#listings">Лучшие предложения</a>
-        <a href="#process">Как мы работаем</a>
-        <a href="#price">Стоимость</a>
+        <a href="#listings">Автомобили</a>
+        <a href="#process">Как это работает</a>
+        <a href="#price">Условия</a>
       </div>
       <div class="footer-col">
         <h4>Связаться</h4>
-        <a href="https://t.me/MOCKBA_HOT" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://t.me/ВАШ_ЮЗЕРНЕЙМ" target="_blank" rel="noopener">Telegram</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -654,7 +713,7 @@
     const payload = Object.fromEntries(formData.entries());
 
     leadSubmit.disabled = true;
-    leadSubmit.textContent = 'Отправляем…';
+    leadSubmit.textContent = 'Подбираем…';
     leadStatus.textContent = '';
     leadStatus.className = 'lead-status';
 
@@ -667,7 +726,7 @@
       const data = await res.json();
 
       if (data.ok) {
-        leadStatus.textContent = 'Заявка отправлена. Мы свяжемся с вами в течение часа.';
+        leadStatus.textContent = 'Получили ваш запрос — подберём варианты и свяжемся с вами.';
         leadStatus.className = 'lead-status success';
         leadForm.reset();
       } else {
@@ -679,7 +738,7 @@
       leadStatus.className = 'lead-status error';
     } finally {
       leadSubmit.disabled = false;
-      leadSubmit.textContent = 'Отправить заявку';
+      leadSubmit.textContent = 'Получить варианты';
     }
   });
 </script>
