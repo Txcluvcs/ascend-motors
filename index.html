@@ -329,20 +329,28 @@
   .process-item h3{font-size:19px;font-weight:600;margin-bottom:8px;}
   .process-item p{color:var(--text-1);font-size:15px;max-width:560px;}
 
-  /* BRANDS */
-  .brands{padding:56px 24px;background:var(--bg-1);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .brand-strip{
-    display:flex;flex-wrap:wrap;
-    justify-content:center;
-    gap:36px;
-    max-width:900px;margin:0 auto;
+  /* CASES */
+  .cases{background:var(--bg-1);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .case-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:20px;
   }
-  .brand-strip span{
-    font-family:'Unbounded',sans-serif;
-    font-size:15px;
-    color:var(--text-2);
-    letter-spacing:.02em;
+  .case-card{
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    min-width:0;
   }
+  .case-photo{
+    width:100%;
+    aspect-ratio:4/3;
+    background-size:cover;
+    background-position:center;
+  }
+  .case-body{padding:16px 18px;}
+  .case-body .case-make{color:var(--text-2);font-size:11px;text-transform:uppercase;letter-spacing:.08em;}
+  .case-body h3{font-size:16px;margin:4px 0 4px;font-family:'Unbounded',sans-serif;font-weight:600;}
+  .case-body .case-note{color:var(--text-1);font-size:13px;}
 
   /* PRICE */
   .price-section{
@@ -425,6 +433,7 @@
     .value-list li{padding:18px;font-size:14px;}
     .mini-steps{grid-template-columns:repeat(2, minmax(0,1fr));}
     .why-grid{grid-template-columns:1fr;}
+    .case-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
 
     .listing-grid{grid-template-columns:1fr;}
     .car-specs{gap:12px;font-size:12.5px;}
@@ -469,7 +478,7 @@
   <div class="hero-grid">
     <div class="eyebrow">Ascend Motors · Москва</div>
     <h1>Премиальные автомобили<br><em>в наличии и под заказ.</em></h1>
-    <p>Автомобили из проверенной партнёрской сети. Подберём, проверим и проведём сделку под ключ.</p>
+    <p>Премиальные автомобили из сети 100+ проверенных партнёров. Подберём то, что есть сейчас, или найдём под ваш запрос.</p>
     <div class="hero-cta-row">
       <a href="#listings" class="btn btn-primary">Смотреть автомобили</a>
       <a href="#request" class="btn btn-ghost">Подобрать автомобиль</a>
@@ -484,16 +493,16 @@
 <section class="listings" id="listings">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Автомобили</div>
-      <h2>Автомобили</h2>
-      <p>Актуальные предложения из нашей партнёрской сети.</p>
+      <div class="eyebrow">Из последних предложений</div>
+      <h2>Что можем найти уже сейчас</h2>
+      <p>Несколько примеров из нашей партнёрской сети — 100+ автомобилей. Показываем часть, чтобы вы понимали уровень и цены.</p>
     </div>
     <div class="listing-grid" id="listing-grid">
       <!-- Карточки машин рендерятся автоматически из файла cars.js -->
     </div>
     <div class="listings-cta">
-      <p>Не нашли нужный автомобиль?</p>
-      <p class="listings-cta-sub">Найдём его среди предложений наших партнёров.</p>
+      <p>Это лишь часть предложений.</p>
+      <p class="listings-cta-sub">Расскажите, что ищете — подберём из полной сети партнёров.</p>
       <a href="#request" class="btn btn-ghost">Оставить запрос</a>
     </div>
   </div>
@@ -603,17 +612,15 @@
   </div>
 </section>
 
-<!-- BRANDS -->
-<section class="brands" id="brands">
+<!-- CASES -->
+<section class="cases" id="cases">
   <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;margin-bottom:28px;">Работали с автомобилями брендов</div>
-    <div class="brand-strip">
-      <span>Porsche</span>
-      <span>Mercedes-AMG</span>
-      <span>BMW</span>
-      <span>Range Rover</span>
-      <span>Bentley</span>
-      <span>Lamborghini</span>
+    <div class="section-head" style="margin:0 auto 48px;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Наши кейсы</div>
+      <h2>Автомобили, с которыми мы работали</h2>
+    </div>
+    <div class="case-grid" id="case-grid">
+      <!-- Карточки рендерятся автоматически из файла cases.js -->
     </div>
   </div>
 </section>
@@ -702,6 +709,7 @@
 </footer>
 
 <script src="cars.js"></script>
+<script src="cases.js"></script>
 <script>
   const leadForm = document.getElementById('lead-form');
   const leadSubmit = document.getElementById('lead-submit');
