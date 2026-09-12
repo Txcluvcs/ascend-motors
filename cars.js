@@ -28,8 +28,8 @@
 const CARS = [
   {
     photo: "images/gt63-2023.jpg",
-    make: "Mercedes-AMG",
-    model: "GT 63",
+    make: "Mercedes-Benz",
+    model: "AMG GT 63",
     year: 2023,
     mileage: 1650,
     priceVat: 23300000,
