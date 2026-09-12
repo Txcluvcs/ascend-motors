@@ -268,15 +268,35 @@
     margin-bottom:16px;
     line-height:1.4;
   }
-  .car-meta{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px;margin-top:auto;}
-  .car-price{font-size:16px;color:var(--bronze-light);font-weight:700;font-family:'Unbounded',sans-serif;}
+  .car-meta{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:auto;
+  }
+  .car-price-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .car-price{
+    font-size:16px;color:var(--bronze-light);font-weight:700;font-family:'Unbounded',sans-serif;
+    display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+  }
   .car-price .vat-note{
-    display:block;
     font-size:11px;color:var(--text-2);font-weight:400;
     font-family:'Manrope',sans-serif;
-    margin-top:2px;
   }
-  .car-link{font-size:13px;color:var(--text-1);}
+  .car-link{
+    font-size:13.5px;
+    color:var(--bronze-light);
+    text-align:center;
+    border:1px solid var(--bronze-dim);
+    padding:10px 14px;
+    display:block;
+  }
   .listings-cta{
     text-align:center;margin-top:48px;
     padding-top:40px;
