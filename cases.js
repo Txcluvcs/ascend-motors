@@ -20,25 +20,32 @@
 
 const CASES = [
   {
-    photo: "images/g63-2026.jpg",
+    photo: "images/case-g63-2026-1.jpg",
     make: "Mercedes-Benz",
     model: "G 63 AMG",
     year: 2026,
     note: "Подбор и сопровождение сделки"
   },
   {
-    photo: "images/g63-2025.jpg",
+    photo: "images/case-gls450-2026.jpg",
     make: "Mercedes-Benz",
-    model: "G 63 AMG",
-    year: 2025,
-    note: "Проверка и сделка под ключ"
+    model: "GLS 450",
+    year: 2026,
+    note: "Подбор и сопровождение сделки"
   },
   {
-    photo: "images/x6-2025.jpg",
-    make: "BMW",
-    model: "X6 xDrive40i",
-    year: 2025,
-    note: "Подбор по параметрам клиента"
+    photo: "images/case-g63-2026-2.jpg",
+    make: "Mercedes-Benz",
+    model: "G 63 AMG",
+    year: 2026,
+    note: "Подбор и сопровождение сделки"
+  },
+  {
+    photo: "images/case-v300d-2026.jpg",
+    make: "Mercedes-Benz",
+    model: "V 300d",
+    year: 2026,
+    note: "Подбор и сопровождение сделки"
   }
 ];
 

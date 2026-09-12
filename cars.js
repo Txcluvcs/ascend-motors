@@ -27,13 +27,13 @@
 
 const CARS = [
   {
-    photo: "images/g63-2026.jpg",
-    make: "Mercedes-Benz",
-    model: "G 63 AMG",
-    year: 2026,
-    mileage: 20,
-    priceNoVat: 30500000,
-    trim: "Подвеска A22 / зимний пакет / внутренний карбон"
+    photo: "images/gt63-2023.jpg",
+    make: "Mercedes-AMG",
+    model: "GT 63",
+    year: 2023,
+    mileage: 1650,
+    priceNoVat: 0, // ЗАПОЛНИ ЦЕНУ — пока не указана
+    trim: "Внутренний и внешний карбон / активная выхлопная система / диски R21"
   },
   {
     photo: "images/g63-2025.jpg",
