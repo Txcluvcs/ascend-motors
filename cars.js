@@ -47,7 +47,7 @@ const CARS = [
   {
     photo: "images/x6-2025.jpg",
     make: "BMW",
-    model: "X6 xDrive40i",
+    model: "X6 40i",
     year: 2025,
     mileage: 44000,
     priceNoVat: 11000000,
