@@ -68,6 +68,8 @@
   }
   .logo{
     font-size:18px;font-weight:700;letter-spacing:.04em;
+    flex:none;
+    white-space:nowrap;
   }
   .logo span{color:var(--bronze-light);}
   .nav-links{
@@ -83,8 +85,11 @@
     font-family:'Unbounded',sans-serif;
     color:var(--bronze-light);
     transition:.2s;
+    white-space:nowrap;
+    flex:none;
   }
   .nav-cta:hover{background:var(--bronze);color:#0e0f10;border-color:var(--bronze);}
+  .nav-cta-short{display:none;}
   .nav-toggle{display:none;}
 
   /* HERO */
@@ -454,6 +459,8 @@
     .nav{padding:14px 16px;}
     .nav-links{display:none;}
     .nav-cta{padding:9px 16px;font-size:12px;}
+    .nav-cta-full{display:none;}
+    .nav-cta-short{display:inline;}
     .logo{font-size:15px;}
 
     .hero-tagline{margin-top:32px;font-size:12.5px;}
@@ -501,7 +508,7 @@
       <a href="#process">Как это работает</a>
       <a href="#price">Условия</a>
     </nav>
-    <a href="#contact" class="nav-cta">Обсудить автомобиль</a>
+    <a href="#contact" class="nav-cta"><span class="nav-cta-full">Обсудить автомобиль</span><span class="nav-cta-short">Написать</span></a>
   </div>
 </header>
 
