@@ -12,10 +12,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: "Method not allowed" });
   }
 
-  const { carQuery, budget, condition, important, contact } = req.body || {};
+  const { carQuery, budget, condition, important, contact, consent } = req.body || {};
 
   if (!contact) {
     return res.status(400).json({ ok: false, error: "Укажите телефон или Telegram" });
+  }
+
+  if (!consent) {
+    return res.status(400).json({ ok: false, error: "Нужно согласие на обработку персональных данных" });
   }
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
