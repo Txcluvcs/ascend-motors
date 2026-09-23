@@ -165,7 +165,7 @@ function renderCarDetail() {
   `).join("");
 
   root.innerHTML = `
-    <div class="car-breadcrumb"><a href="catalog.html">← Все автомобили</a></div>
+    <div class="car-breadcrumb"><a href="javascript:void(0)" onclick="goBack()">← Назад</a></div>
     <div class="car-gallery">
       <div class="car-gallery-main" id="car-gallery-main" style="background-image:url('${photos[0]}')"></div>
       ${photos.length > 1 ? `<div class="car-gallery-thumbs">${thumbs}</div>` : ""}
@@ -180,7 +180,6 @@ function renderCarDetail() {
     <div class="car-detail-specs">
       <div><div class="spec-label">Год</div><div class="spec-value">${car.year}</div></div>
       <div><div class="spec-label">Пробег</div><div class="spec-value">${formatKm(car.mileage)}</div></div>
-      ${car.trim ? `<div><div class="spec-label">Комплектация</div><div class="spec-value" style="font-size:13px;">${car.trim}</div></div>` : ""}
     </div>
     ${car.description ? `<div class="car-detail-description">${car.description}</div>` : ""}
     <div class="car-detail-cta">
@@ -190,6 +189,14 @@ function renderCarDetail() {
   `;
 
   window._carPhotos = photos;
+}
+
+function goBack() {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "catalog.html";
+  }
 }
 
 function setCarPhoto(i) {
