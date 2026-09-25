@@ -37,12 +37,12 @@
 const CARS = [
   {
     id: "gt63-2023",
-    photos: ["images/gt63-2023.jpg"],
-    make: "Mercedes-AMG",
-    model: "GT 63",
+    photos: ["images/AMG GT (1), images/AMG GT (2), images/AMG GT (3), images/AMG GT (4, images/AMG GT (5)"],
+    make: "Mercedes-Benz",
+    model: "AMG GT 63",
     year: 2023,
     mileage: 1650,
-    priceNoVat: 0, // ЗАПОЛНИ ЦЕНУ — пока не указана
+    priceVat: 23300000, // ЗАПОЛНИ ЦЕНУ — пока не указана
     trim: "Внутренний и внешний карбон / активная выхлопная система / диски R21",
     description: "Mercedes-AMG GT 63 в отличном состоянии, пробег всего 1650 км. Полный карбоновый обвес — внутренний и внешний, активная выхлопная система, диски R21. Автомобиль проверен, готов к сделке."
   },
