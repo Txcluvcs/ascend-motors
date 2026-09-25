@@ -37,7 +37,7 @@
 const CARS = [
   {
     id: "gt63-2023",
-    photos: ["images/AMG GT (1).jpg, images/AMG GT (2).jpg, images/AMG GT (3).jpg, images/AMG GT (4).jpg, images/AMG GT (5).jpg"],
+    photos: ["images/AMG GT (1).jpeg, images/AMG GT (2).jpeg, images/AMG GT (3).jpeg, images/AMG GT (4).jpeg, images/AMG GT (5).jpeg"],
     make: "Mercedes-Benz",
     model: "AMG GT 63",
     year: 2023,
