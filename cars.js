@@ -58,15 +58,15 @@ const CARS = [
     description: "Абсолютно новый автомобиль. Привезен из Германии. Цвет кузова: AMG Monza grau magno. Почти максимальная комплектация с подвеской AMG RIDE CONTROL."
   },
   {
-    id: "x6-2025",
-    photos: ["images/x6-2025.jpg"],
+    id: "xm-2023",
+    photos: ["images/xm1.jpeg", "images/xm2.jpeg", "images/xm3.jpeg", "images/xm4.jpeg", "images/xm5.jpeg"],
     make: "BMW",
-    model: "X6 xDrive40i",
-    year: 2025,
-    mileage: 44000,
-    priceNoVat: 11000000,
-    trim: "Панорамная крыша / музыкальная система Harman/Kardon",
-    description: "BMW X6 xDrive40i — панорамная крыша, аудиосистема Harman/Kardon. Автомобиль проверен и готов к передаче."
+    model: "XM",
+    year: 2023,
+    mileage: 6200,
+    priceNoVat: 17800000,
+    trim: "музыкальная система Bowers & Wilkins / диски R23",
+    description: "Автомобиль в состоянии нового. Без ДТП и окрасов. Максимальная комплектация."
   }
 ];
 
