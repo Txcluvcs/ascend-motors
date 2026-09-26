@@ -48,7 +48,7 @@ const CARS = [
   },
   {
     id: "g63-2025",
-    photos: ["images/g63-2025.jpg"],
+    photos: ["images/g63-2025.jpg", "images/G632.jpeg", "images/G633.jpeg", "images/G634.jpeg", "images/G635.jpeg"],
     make: "Mercedes-Benz",
     model: "G 63 AMG",
     year: 2025,
